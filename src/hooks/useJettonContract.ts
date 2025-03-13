@@ -16,7 +16,7 @@ export function useJettonContract() {
     const jettonContract = useAsyncInitialize(async()=>{
         if(!client || !wallet) return;
 
-        const contract = SampleJetton.fromAddress(Address.parse("EQB8StgTQXidy32a8xfu7j4HMoWYV0b0cFM8nXsP2cza_b7Y"))
+        const contract = SampleJetton.fromAddress(Address.parse("EQB8StgTQXidy32a8xfu7j4HMoWYV0b0cFM8nXsP2cza_b7Y")) 
 
         return client.open(contract) as OpenedContract<SampleJetton>
     }, [client, wallet])
